@@ -1,0 +1,20 @@
+package cimbapiautomation;
+
+import org.testng.annotations.BeforeClass;
+
+import io.restassured.RestAssured;
+
+public class cimbApiAutomation {
+	
+	
+	@BeforeClass
+	public void setup()
+	{
+		RestAssured.authentication=RestAssured.preemptive().basic("wong.afiq.1234@gmail.com", "Thi$1sTest");
+		RestAssured.baseURI="https://developer.todoist.com/rest/v1/";
+		
+	}
+	}
+	
+
+
